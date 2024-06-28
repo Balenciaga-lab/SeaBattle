@@ -1,0 +1,38 @@
+﻿<Window x:Class="SeaBattle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SeaBattle"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="1" Content="Игрок 1" HorizontalAlignment="Left" FontSize="16" Margin="82,10,0,1" />
+        <Label Grid.Row="0" Grid.Column="1" Content="Игрок 2" HorizontalAlignment="Left" FontSize="16" Margin="556,10,0,10" />
+
+        <Grid Name="Player1Grid" Grid.Row="1" Grid.Column="0" Margin="10,10,485,10" Grid.ColumnSpan="2">
+            <!-- Сетка игрока 1 -->
+        </Grid>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Начать расстановку" Click="StartSetup_Click" Width="150" Height="50" Margin="10"/>
+            <Button Content="Начать игру" Click="StartGame_Click" Width="150" Height="50" Margin="10" IsEnabled="False" Name="StartGameButton"/>
+            <Button Content="Правила игры" Click="ShowRules_Click" Width="150" Height="50" Margin="10"/>
+        </StackPanel>
+
+        <Grid Name="Player2Grid" Grid.Row="1" Grid.Column="1" Margin="490,10,10,10">
+            <!-- Сетка игрока 2 -->
+        </Grid>
+    </Grid>
+</Window>
